@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "author": "Zhang.Sheng",
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "component-gallery",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "version": "0.0.0"
+}
