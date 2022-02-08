@@ -4,7 +4,7 @@
  * @Author: zhangsheng
  * @Date: 2022-01-19 13:41:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-19 15:48:38
+ * @LastEditTime: 2022-02-08 15:29:24
  */
 
 import { axiosDefault } from './lib/axios'
@@ -51,6 +51,7 @@ Vaxios.install = function (Vue, options) {
    */
 
   ;(Vue.prototype.$GET = async (url, payload) => {
+    // eslint-disable-next-line no-useless-catch
     try {
       let response = null
 
@@ -80,6 +81,7 @@ Vaxios.install = function (Vue, options) {
      * @param {Object | Array} payload POST 的 body 参数
      */
     (Vue.prototype.$PUT = async (url, payload) => {
+      // eslint-disable-next-line no-useless-catch
       try {
         if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
           const response = await $axios.put(`${url}`, payload)
@@ -97,6 +99,7 @@ Vaxios.install = function (Vue, options) {
      * @param {Object | Array} payload PATCH 的 body 参数
      */
     (Vue.prototype.$PATCH = async (url, payload) => {
+      // eslint-disable-next-line no-useless-catch
       try {
         if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
           const response = await $axios.patch(`${url}`, payload)
@@ -114,6 +117,7 @@ Vaxios.install = function (Vue, options) {
      * @param {Object} payload DELETE 的 body 参数
      */
     (Vue.prototype.$DELETE = async (url, payload) => {
+      // eslint-disable-next-line no-useless-catch
       try {
         let response = null
         if (_lodash.size(payload)) {
@@ -136,6 +140,7 @@ Vaxios.install = function (Vue, options) {
      * @param {Object | Array} payload PUT 的 body 参数
      */
     (Vue.prototype.$PUT = async (url, payload) => {
+      // eslint-disable-next-line no-useless-catch
       try {
         if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
           const response = await $axios.put(`${url}`, payload)

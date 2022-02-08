@@ -5,8 +5,20 @@
     "packages/*"
   ],
   "name": "component-gallery",
+  "scripts": {
+    "build": "lerna exec --parellel -- babel --root-mode upward sec -d lib --ignore **/*.story.js,**/*.spec.js",
+    "bootstrap": "lerna bootstrap --use-workspaces"
+  },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.2",
+    "lerna": "^4.0.0",
+    "webpack": "^5.68.0"
   },
   "version": "0.0.0",
   "dependencies": {
