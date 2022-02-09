@@ -10,8 +10,7 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commit --yes",
-    "diff": "lerna diff",
-    "change": "lerna change"
+    "diff": "lerna diff"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
