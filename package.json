@@ -6,7 +6,6 @@
   ],
   "name": "component-gallery",
   "scripts": {
-    "build": "lerna exec --parellel -- babel --root-mode upward sec -d lib --ignore **/*.story.js,**/*.spec.js",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commit --yes",

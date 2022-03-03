@@ -5,9 +5,6 @@
     "access": "public"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
     "test": "echo testing server with version: $npm_package_version"
   },
   "dependencies": {
