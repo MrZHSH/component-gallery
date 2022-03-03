@@ -1,5 +1,4 @@
 {
-  "private": true,
   "author": "Zhang.Sheng",
   "workspaces": [
     "packages/*"
@@ -23,7 +22,7 @@
     "lerna": "^4.0.0",
     "webpack": "^5.68.0"
   },
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {
     "axios": "^0.25.0"
   }
