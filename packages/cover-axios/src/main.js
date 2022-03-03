@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vaxios from 'vaxios-plugin'
+import Vaxios from './cover-axios'
 
 Vue.use(Vaxios, {
   useparam: true,
