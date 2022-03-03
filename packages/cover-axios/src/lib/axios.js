@@ -17,7 +17,7 @@ if (!axios) {
  * @name: zhangsheng
  * @msg: 创建一个axios的实例
  * @param {string} baseURL
- * @param {number} timeout
+ * @param {number} timeout ghjhg
  * @return {object} 返回一个promise实例
  */
 export function axiosDefault(
