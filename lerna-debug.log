@@ -1,14 +1,123 @@
-15 error Error: Command failed with exit code 1: git remote update
-15 error ssh: Could not resolve hostname github.com: Name or service not known
-15 error fatal: Could not read from remote repository.
-15 error
-15 error Please make sure you have the correct access rights
-15 error and the repository exists.
-15 error error: Could not fetch origin
-15 error Fetching origin
-15 error     at makeError (D:\workspaces\component-gallery\node_modules\@lerna\child-process\node_modules\execa\lib\error.js:60:11)
-15 error     at Function.module.exports.sync (D:\workspaces\component-gallery\node_modules\@lerna\child-process\node_modules\execa\index.js:194:17)
-15 error     at Object.execSync (D:\workspaces\component-gallery\node_modules\@lerna\child-process\index.js:39:16)
-15 error     at updateRemote (D:\workspaces\component-gallery\node_modules\@lerna\version\lib\is-behind-upstream.js:34:16)
-15 error     at isBehindUpstream (D:\workspaces\component-gallery\node_modules\@lerna\version\lib\is-behind-upstream.js:16:3)
-15 error     at VersionCommand.initialize (D:\workspaces\component-gallery\node_modules\@lerna\version\index.js:153:9)
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'C:\\Users\\BJ-SHENG-ZHANG\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath D:\workspaces\component-gallery
+3 info versioning independent
+4 verbose session 15753a8ab8461bfb
+5 verbose user-agent lerna/4.0.0/node@v12.18.3+x64 (win32)
+6 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
+7 verbose rootPath D:\workspaces\component-gallery
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch dev_zs
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream dev_zs is behind origin/dev_zs by 0 commit(s) and ahead by 3
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "@component-gallery/cover-axios@0.1.4-3-g1bef498" => {"lastTagName":"@component-gallery/cover-axios@0.1.4","lastVersion":"0.1.4","refCount":"3","sha":"1bef498","isDirty":false}
+18 info Looking for changed packages since @component-gallery/cover-axios@0.1.4
+19 silly checking diff packages/cover-axios
+20 silly found diff in packages/cover-axios/package.json
+20 silly found diff in packages/cover-axios/src/App.vue
+20 silly found diff in packages/cover-axios/src/lib/axios.js
+20 silly found diff in packages/cover-axios/src/main.js
+20 silly found diff in packages/cover-axios/src/router/index.js
+20 silly found diff in packages/cover-axios/src/store/index.js
+20 silly found diff in packages/cover-axios/src/views/About.vue
+20 silly found diff in packages/cover-axios/src/views/Home.vue
+21 verbose filtered diff [
+21 verbose filtered diff   'packages/cover-axios/package.json',
+21 verbose filtered diff   'packages/cover-axios/src/App.vue',
+21 verbose filtered diff   'packages/cover-axios/src/lib/axios.js',
+21 verbose filtered diff   'packages/cover-axios/src/main.js',
+21 verbose filtered diff   'packages/cover-axios/src/router/index.js',
+21 verbose filtered diff   'packages/cover-axios/src/store/index.js',
+21 verbose filtered diff   'packages/cover-axios/src/views/About.vue',
+21 verbose filtered diff   'packages/cover-axios/src/views/Home.vue'
+21 verbose filtered diff ]
+22 verbose updated @component-gallery/cover-axios
+23 verbose git-describe undefined => "@component-gallery/cover-axios@0.1.4-3-g1bef498"
+24 silly git-describe parsed => {"lastTagName":"@component-gallery/cover-axios@0.1.4","lastVersion":"0.1.4","refCount":"3","sha":"1bef498","isDirty":false}
+25 info execute Skipping releases
+26 silly lifecycle No script for "preversion" in "component-gallery", continuing
+27 silly lifecycle No script for "preversion" in "@component-gallery/cover-axios", continuing
+28 silly lifecycle No script for "version" in "@component-gallery/cover-axios", continuing
+29 silly lifecycle No script for "version" in "component-gallery", continuing
+30 silly gitAdd [ 'packages/cover-axios/package.json' ]
+31 silly gitCommit Publish
+31 silly gitCommit
+31 silly gitCommit  - @component-gallery/cover-axios@1.0.0
+32 verbose git [
+32 verbose git   'commit',
+32 verbose git   '-F',
+32 verbose git   'C:\\Users\\BJ-SHE~1\\AppData\\Local\\Temp\\56147d36-0299-49c7-9092-f73e8dbec09c\\lerna-commit.txt'
+32 verbose git ]
+33 silly gitTag @component-gallery/cover-axios@1.0.0
+34 verbose git [
+34 verbose git   'tag',
+34 verbose git   '@component-gallery/cover-axios@1.0.0',
+34 verbose git   '-m',
+34 verbose git   '@component-gallery/cover-axios@1.0.0'
+34 verbose git ]
+35 silly lifecycle No script for "postversion" in "@component-gallery/cover-axios", continuing
+36 silly lifecycle No script for "postversion" in "component-gallery", continuing
+37 info git Pushing tags...
+38 silly gitPush origin dev_zs
+39 info publish Publishing packages to npm...
+40 notice Skipping all user and access validation due to third-party registry
+41 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+42 warn ENOLICENSE Package @component-gallery/cover-axios is missing a license.
+42 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+42 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+43 silly getCurrentSHA
+44 verbose getCurrentSHA da7d23a2874a76258e33edcf7cd90bbaec0f7444
+45 silly lifecycle No script for "prepublish" in "component-gallery", continuing
+46 silly lifecycle No script for "prepare" in "component-gallery", continuing
+47 silly lifecycle No script for "prepublishOnly" in "component-gallery", continuing
+48 silly lifecycle No script for "prepack" in "component-gallery", continuing
+49 verbose pack-directory packages\cover-axios
+50 silly lifecycle No script for "prepublish" in "@component-gallery/cover-axios", continuing
+51 silly lifecycle No script for "prepare" in "@component-gallery/cover-axios", continuing
+52 silly lifecycle No script for "prepublishOnly" in "@component-gallery/cover-axios", continuing
+53 silly lifecycle No script for "prepack" in "@component-gallery/cover-axios", continuing
+54 silly lifecycle No script for "postpack" in "@component-gallery/cover-axios", continuing
+55 verbose packed packages\cover-axios
+56 silly lifecycle No script for "postpack" in "component-gallery", continuing
+57 verbose publish @component-gallery/cover-axios
+58 silly FetchError: request to http://npm.xarc.wiki:4873/@component-gallery%2fcover-axios failed, reason: connect ECONNREFUSED 161.189.156.204:4873
+58 silly     at ClientRequest.<anonymous> (D:\workspaces\component-gallery\node_modules\minipass-fetch\lib\index.js:110:14)
+58 silly     at ClientRequest.emit (events.js:315:20)
+58 silly     at Socket.socketErrorListener (_http_client.js:426:9)
+58 silly     at Socket.emit (events.js:327:22)
+58 silly     at emitErrorNT (internal/streams/destroy.js:92:8)
+58 silly     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+58 silly     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+58 silly  FetchError: request to http://npm.xarc.wiki:4873/@component-gallery%2fcover-axios failed, reason: connect ECONNREFUSED 161.189.156.204:4873
+58 silly     at ClientRequest.<anonymous> (D:\workspaces\component-gallery\node_modules\minipass-fetch\lib\index.js:110:14)
+58 silly     at ClientRequest.emit (events.js:315:20)
+58 silly     at Socket.socketErrorListener (_http_client.js:426:9)
+58 silly     at Socket.emit (events.js:327:22)
+58 silly     at emitErrorNT (internal/streams/destroy.js:92:8)
+58 silly     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+58 silly     at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+58 silly   code: 'ECONNREFUSED',
+58 silly   errno: 'ECONNREFUSED',
+58 silly   syscall: 'connect',
+58 silly   address: '161.189.156.204',
+58 silly   port: 4873,
+58 silly   type: 'system'
+58 silly }
+59 error ECONNREFUSED request to http://npm.xarc.wiki:4873/@component-gallery%2fcover-axios failed, reason: connect ECONNREFUSED 161.189.156.204:4873
+60 error FetchError: request to http://npm.xarc.wiki:4873/@component-gallery%2fcover-axios failed, reason: connect ECONNREFUSED 161.189.156.204:4873
+60 error     at ClientRequest.<anonymous> (D:\workspaces\component-gallery\node_modules\minipass-fetch\lib\index.js:110:14)
+60 error     at ClientRequest.emit (events.js:315:20)
+60 error     at Socket.socketErrorListener (_http_client.js:426:9)
+60 error     at Socket.emit (events.js:327:22)
+60 error     at emitErrorNT (internal/streams/destroy.js:92:8)
+60 error     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)

@@ -1,6 +1,6 @@
 {
   "name": "@component-gallery/cover-axios",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
@@ -32,5 +32,6 @@
     "prettier": "^2.2.1",
     "sass-loader": "^7.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "gitHead": "da7d23a2874a76258e33edcf7cd90bbaec0f7444"
 }
