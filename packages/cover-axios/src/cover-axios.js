@@ -4,11 +4,19 @@
  * @Author: zhangsheng
  * @Date: 2022-01-19 13:41:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-02-08 15:29:24
+ * @LastEditTime: 2022-03-03 17:37:36
  */
 
-import { axiosDefault } from './lib/axios'
-import _lodash from 'lodash'
+import {
+  axiosDefault
+} from './lib/axios'
+import {
+  proto_3
+} from './lib/vue3-proto'
+import {
+  proto_2
+} from './lib/vue2-proto'
+const _lodash = require('lodash')
 
 const Vaxios = []
 
@@ -38,118 +46,15 @@ Vaxios.install = function (Vue, options) {
 
   if (opt.method && opt.param) {
     $axios = opt.method
-  } else if (_lodash.size(opt.useparam) && _lodash.isObject(opt.param)) {
+  } else if (opt.useparam && _lodash.isObject(opt.param)) {
     $axios = axiosDefault(opt.param.baseURL, opt.param.timeout)
   }
 
-  /**
-   * [$GET 全局的 GET 方法]
-   *
-   * @method $GET
-   * @param {String} url RESTful URL
-   * @param {Object} payload GET 的 body 参数
-   */
-
-  ;(Vue.prototype.$GET = async (url, payload) => {
-    // eslint-disable-next-line no-useless-catch
-    try {
-      let response = null
-
-      if (_lodash.size(payload)) {
-        if (_lodash.isObject(payload)) {
-          let _payload = _lodash.omitBy(
-            payload,
-            (item) => item === '' || item === undefined || item === null
-          )
-
-          response = await $axios.get(`${url}`, {
-            params: _payload,
-          })
-        } else throw Error('payload must be object')
-      } else response = await $axios.get(`${url}`)
-
-      return response.data
-    } catch (err) {
-      throw err
-    }
-  }),
-    /**
-     * [$POST 全局的 POST 方法]
-     *
-     * @method $POST
-     * @param {String} url RESTful URL
-     * @param {Object | Array} payload POST 的 body 参数
-     */
-    (Vue.prototype.$PUT = async (url, payload) => {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
-          const response = await $axios.put(`${url}`, payload)
-          return response.data
-        } else throw Error('payload must be Array or Object')
-      } catch (err) {
-        throw err
-      }
-    }),
-    /**
-     * [$PATCH 全局的 PATCH 方法]
-     *
-     * @method $PATCH
-     * @param {String} url RESTful URL
-     * @param {Object | Array} payload PATCH 的 body 参数
-     */
-    (Vue.prototype.$PATCH = async (url, payload) => {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
-          const response = await $axios.patch(`${url}`, payload)
-          return response.data
-        } else throw Error('payload must be Array or Object')
-      } catch (err) {
-        throw err
-      }
-    }),
-    /**
-     * [$DELETE 全局的 DELETE 方法]
-     *
-     * @method $DELETE
-     * @param {String} url RESTful URL
-     * @param {Object} payload DELETE 的 body 参数
-     */
-    (Vue.prototype.$DELETE = async (url, payload) => {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        let response = null
-        if (_lodash.size(payload)) {
-          if (_lodash.isObject(payload)) {
-            response = await $axios.delete(`${url}`, {
-              data: payload,
-            })
-          } else throw Error('payload must be Object')
-        } else response = await $axios.delete(`${url}`)
-        return response.data
-      } catch (err) {
-        throw err
-      }
-    }),
-    /**
-     * [$PUT 全局的 PUT 方法]
-     *
-     * @method $PUT
-     * @param {String} url RESTful URL
-     * @param {Object | Array} payload PUT 的 body 参数
-     */
-    (Vue.prototype.$PUT = async (url, payload) => {
-      // eslint-disable-next-line no-useless-catch
-      try {
-        if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
-          const response = await $axios.put(`${url}`, payload)
-          return response.data
-        } else throw Error('payload must be Array or Object')
-      } catch (err) {
-        throw err
-      }
-    })
+  if (Vue.config.globalProperties !== undefined) {
+    proto_3(Vue, _lodash, $axios) // VUE3 使用config.globalProperties绑定全局变量
+  } else {
+    proto_2(Vue, _lodash, $axios) // VUE2 使用prototype绑定全局变量
+  }
 }
 
 export default Vaxios

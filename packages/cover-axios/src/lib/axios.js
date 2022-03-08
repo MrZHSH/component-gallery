@@ -4,7 +4,7 @@
  * @Author: zhangsheng
  * @Date: 2022-01-19 10:52:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-19 13:34:55
+ * @LastEditTime: 2022-03-03 17:37:49
  */
 import axios from 'axios'
 //const axios = typeof require === 'function' ? require('axios') : window.axios
@@ -32,14 +32,14 @@ export function axiosDefault(
 
   // http request 拦截器
   instance.interceptors.request.use(
-    (config) => {
-      config.headers['Content-Type'] = 'application/json;chartset=UTF-8'
-      return config
-    },
-    (error) => {
-      return Promise.reject(error)
-    }
-  ),
+      (config) => {
+        config.headers['Content-Type'] = 'application/json;chartset=UTF-8'
+        return config
+      },
+      (error) => {
+        return Promise.reject(error)
+      }
+    ),
     // HTTP response 拦截器
     instance.interceptors.response.use(
       (response) => {
