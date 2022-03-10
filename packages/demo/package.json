@@ -1,5 +1,5 @@
 {
-  "name": "@component-gallery/demo",
+  "name": "@component-gallery-xtapi/demo",
   "version": "1.0.1",
   "publishConfig": {
     "access": "public"
