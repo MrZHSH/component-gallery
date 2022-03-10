@@ -4,7 +4,7 @@
  * @Author: zhangsheng
  * @Date: 2022-01-19 13:41:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-03-03 17:37:36
+ * @LastEditTime: 2022-03-10 17:06:31
  */
 
 import {
@@ -38,6 +38,7 @@ Vaxios.install = function (Vue, options) {
       baseURL: 'http//127.0.0.1:8080/api',
       timeout: 0,
     },
+    token: ''
   }
 
   for (let propetry in options) {
@@ -47,7 +48,7 @@ Vaxios.install = function (Vue, options) {
   if (opt.method && opt.param) {
     $axios = opt.method
   } else if (opt.useparam && _lodash.isObject(opt.param)) {
-    $axios = axiosDefault(opt.param.baseURL, opt.param.timeout)
+    $axios = axiosDefault(opt.param.baseURL, opt.param.timeout, opt.token)
   }
 
   if (Vue.config.globalProperties !== undefined) {

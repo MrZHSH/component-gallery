@@ -4,7 +4,7 @@
  * @Author: zhangsheng
  * @Date: 2022-01-19 10:52:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-03-03 17:37:49
+ * @LastEditTime: 2022-03-10 17:08:03
  */
 import axios from 'axios'
 //const axios = typeof require === 'function' ? require('axios') : window.axios
@@ -22,7 +22,8 @@ if (!axios) {
  */
 export function axiosDefault(
   baseURL = 'http://127.0.0.1:8080/api',
-  timeout = 0
+  timeout = 0,
+  token = ''
 ) {
   // 创建一个axios的实例
   const instance = axios.create({
@@ -34,6 +35,9 @@ export function axiosDefault(
   instance.interceptors.request.use(
       (config) => {
         config.headers['Content-Type'] = 'application/json;chartset=UTF-8'
+        if (token) {
+          config.headers['Authorization'] = token
+        }
         return config
       },
       (error) => {
