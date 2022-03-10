@@ -1,5 +1,5 @@
 /**
- * 组件入口文件
+ *  组件入口文件
  */
 import TForm from "./components/base-form";
 
