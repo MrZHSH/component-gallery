@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: zhangsheng
+ * @Date: 2022-01-11 15:09:47
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-01-19 14:03:51
+-->
+
 # component-gallery
 
 搭建一个组件库
@@ -29,3 +38,15 @@ yarn install # 等价于 npx lerna bootstrap --npm-client yarn --use-workspaces
 ### 清理所有 packages 下面子项目的 node_modules
 
 npx lerna clean
+
+### 给某一个 package 安装依赖
+
+yarn workspace packageB add packageA 将 packageA 作为 packageB 的依赖进行安装
+
+### 给所有的 package 安装依赖
+
+yarn workspaces add lodash
+
+### 给 root 安装依赖：一般的公用的开发工具都是安装在 root 里，如 typescript
+
+yarn add -W -D typescript

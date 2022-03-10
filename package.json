@@ -1,12 +1,22 @@
 {
-  "private": true,
   "author": "Zhang.Sheng",
+  "private":true,
   "workspaces": [
     "packages/*"
   ],
   "name": "component-gallery",
-  "devDependencies": {
-    "lerna": "^4.0.0"
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "test": "lerna run test",
+    "new-version": "lerna version --conventional-commit --yes",
+    "diff": "lerna diff"
   },
-  "version": "0.0.0"
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "webpack": "^5.68.0"
+  },
+  "version": "1.0.1",
+  "dependencies": {
+    
+  }
 }
