@@ -1,6 +1,6 @@
 {
   "author": "Zhang.Sheng",
-  "private":true,
+  "private":false,
   "workspaces": [
     "packages/*"
   ],
