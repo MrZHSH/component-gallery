@@ -1,6 +1,6 @@
 {
   "name": "@component-gallery-xtapi/cover-axios",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public",
     "@sheng.zhang:registry": "https://gitlab.xtalpi.xyz/api/v4/projects/210/packages/npm/"
