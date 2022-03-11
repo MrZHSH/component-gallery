@@ -4,7 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "name": "component-gallery-xtapi",
+  "name": "component-gallery",
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "test": "lerna run test",
