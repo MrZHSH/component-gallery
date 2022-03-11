@@ -25,3 +25,4 @@ pnpm-debug.log*
 *.sw?
 #yarn
 yarn.lock 
+lerna-debug.log

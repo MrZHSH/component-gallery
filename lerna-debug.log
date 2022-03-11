@@ -1,7 +1,0 @@
-36 error Error: Command failed with exit code 128: git tag @component-gallery/cover-axios@1.0.0 -m @component-gallery/cover-axios@1.0.0
-36 error fatal: tag '@component-gallery/cover-axios@1.0.0' already exists
-36 error     at makeError (D:\workspaces\component-gallery\node_modules\@lerna\child-process\node_modules\execa\lib\error.js:60:11)
-36 error     at handlePromise (D:\workspaces\component-gallery\node_modules\@lerna\child-process\node_modules\execa\index.js:118:26)
-36 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
-36 error     at async Promise.all (index 0)
-36 error     at async Promise.all (index 0)
