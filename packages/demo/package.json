@@ -1,6 +1,6 @@
 {
   "name": "@component-gallery-xtapi/demo",
-  "version": "1.0.10",
+  "version": "1.0.9",
   "publishConfig": {
     "@component-gallery-xtapi:registry": "https://gitlab.xtalpi.xyz/sheng.zhang/component-gallery-xtapi/210/packages/npm/"
   },
@@ -49,5 +49,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "gitHead": "5d498abc1e4344e23481501ebe78ff0936a7073b"
+  "gitHead": "62a86db663e21366f3db79fc0dc9ad8b3e85e992"
 }
