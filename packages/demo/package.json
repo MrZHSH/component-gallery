@@ -2,8 +2,7 @@
   "name": "@component-gallery-xtapi/demo",
   "version": "1.0.4",
   "publishConfig": {
-    "access": "public",
-    "@sheng.zhang:registry": "https://gitlab.xtalpi.xyz/api/v4/projects/210/packages/npm/"
+    "@sheng.zhang:registry": "https://gitlab.xtalpi.xyz/sheng.zhang/component-gallery-xtapi/210/packages/npm/"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
