@@ -36,11 +36,11 @@ export function proto_3(Vue, _lodash, $axios) {
    * @param {String} url RESTful URL
    * @param {Object | Array} payload POST 的 body 参数
    */
-  (Vue.config.globalProperties.$PUT = async (url, payload) => {
+  (Vue.config.globalProperties.$POST = async (url, payload) => {
     // eslint-disable-next-line no-useless-catch
     try {
       if (_lodash.isArray(payload) || _lodash.isObject(payload)) {
-        const response = await $axios.put(`${url}`, payload)
+        const response = await $axios.post(`${url}`, payload)
         return response.data
       } else throw Error('payload must be Array or Object')
     } catch (err) {

@@ -1,8 +1,8 @@
 {
-  "name": "@component-gallery-xtapi/cover-axios",
+  "name": "@component-gallery/cover-axios",
   "version": "1.0.11",
   "publishConfig": {
-    "@component-gallery-xtapi:registry": "https://gitlab.xtalpi.xyz/sheng.zhang/component-gallery-xtapi/210/packages/npm/"
+    "access": "public"
   },
   "scripts": {
     "test": "echo testing server with version: $npm_package_version"
@@ -12,5 +12,5 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.21"
   },
-  "gitHead": "62a86db663e21366f3db79fc0dc9ad8b3e85e992"
+  "gitHead": "83ff9c8ec8c4fd6adee17b07474684df5a9c0d80"
 }

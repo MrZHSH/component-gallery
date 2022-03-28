@@ -13,8 +13,9 @@ import Vaxios from "@component-gallery/cover-axios/src/cover-axios";
 Vue.use(Vaxios, {
   useparam: true,
   param: {
-    baseURL: 'https://cnodejs.org/api/v1',
-    timeout: 0
+    baseURL: '/',
+    timeout: 0,
+    token: ''
   }
 })
 ```
@@ -94,105 +95,4 @@ Vue.use(Vaxios, {
     },
   }
 </script>
-```
-
-## axios 拦截的一个实例
-
-```javascript
-import axios from 'axios'
-import store from '@/store'
-import config from '@/config'
-import router from '@/router'
-import { Message } from 'element-ui'
-
-const protocol = window.location.protocol
-const host = window.location.host
-const domain = document.domain
-let serverURL = ''
-
-if (domain === '127.0.0.1' || domain === 'localhost') {
-  serverURL = config.serverURL
-} else {
-  serverURL = `${protocol}` + '//' + `${host}:8888/api`
-}
-
-// 创建 axios 实例
-const instance = axios.create({
-  baseURL: serverURL,
-  timeout: 0,
-})
-
-// http request 拦截器
-instance.interceptors.request.use(
-  (config) => {
-    // 在 headers 头上添加参数
-    config.headers['Content-Type'] = 'application/json;charset=UTF-8'
-    if (store.state.auth.authToken) {
-      config.headers['Authorization'] = `${store.state.auth.authToken}`
-    }
-    return config
-  },
-  (error) => {
-    return Promise.reject(error)
-  }
-)
-
-// http response 拦截器
-instance.interceptors.response.use(
-  (response) => {
-    return response
-  },
-  (error) => {
-    if (error.response) {
-      const err = error.response.data
-      switch (err.status) {
-        case 401:
-          Message({
-            type: 'waring',
-            message: err.message,
-          })
-          setTimeout(() => {
-            store.dispatch('logout')
-            router.replace({
-              name: 'Login',
-            })
-          }, 500)
-          break
-        case 404:
-          Message({
-            type: 'waring',
-            message: err.message,
-          })
-          setTimeout(() => {
-            router.replace({
-              name: 'NotFound',
-            })
-          }, 500)
-          break
-        case 422:
-          Message({
-            type: 'waring',
-            message: err.message,
-          })
-          break
-        case 500:
-          Message({
-            type: 'error',
-            message: err.message,
-          })
-          break
-        default:
-          Message({
-            type: 'error',
-            message: err.message,
-          })
-          break
-      }
-    }
-
-    return Promise.reject(error)
-  }
-)
-
-export default instance
 ```

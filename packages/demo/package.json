@@ -1,8 +1,8 @@
 {
-  "name": "@component-gallery-xtapi/demo",
+  "name": "@component-gallery/demo",
   "version": "1.0.11",
   "publishConfig": {
-    "@component-gallery-xtapi:registry": "https://gitlab.xtalpi.xyz/sheng.zhang/component-gallery-xtapi/210/packages/npm/"
+    "access": "public"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -49,5 +49,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "gitHead": "62a86db663e21366f3db79fc0dc9ad8b3e85e992"
+  "gitHead": "83ff9c8ec8c4fd6adee17b07474684df5a9c0d80"
 }
