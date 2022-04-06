@@ -22,12 +22,11 @@ Vue.use(Vaxios, {
 
 ## options
 
-| option     | type     | default                                                                                        | description                                                                          |
-| ---------- | -------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| method     | function | null                                                                                           | 自定义 axios 拦截方法,如果有自定义的方法,推荐设置自定义的拦截方法                    |
-| throwError | object   | { get_debug: false,post_debug: false,put_debug: false,patch_debug: false,delete_debug: false } | 当然可以直接使用 Boolean 值进行全部开启和全部关闭,该作用是在控制台中输出请求到的数据 |
-| useparam   | boolean  | false                                                                                          | 如果不想自定义 axios 拦截方法,该参数必须为 true                                      |
-| param      | object   | { baseURL: '<http://127.0.0.1:8080/api>',timeout: 0 }                                          | 自定义 axios 拦截参数                                                                |
+| option   | type     | default                                               | description                                                       |
+| -------- | -------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| method   | function | null                                                  | 自定义 axios 拦截方法,如果有自定义的方法,推荐设置自定义的拦截方法 |
+| useparam | boolean  | false                                                 | 如果不想自定义 axios 拦截方法,该参数必须为 true                   |
+| param    | object   | { baseURL: '<http://127.0.0.1:8080/api>',timeout: 0 } | 自定义 axios 拦截参数                                             |
 
 ## 在 vue 中使用
 
